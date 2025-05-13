@@ -1,0 +1,67 @@
+
+<section class="vh100">
+    <div class="container-Fluid">
+      <div class="Row">
+        <div class="Col-SM-6 Text-Black">
+  
+          <div class="loginContainer">
+  
+            @if (isLogin) {
+              <form id="loginForm">
+  
+                <h3 class="title">User Log in</h3>
+    
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="pharmacyName" [(ngModel)]="userLogin.pharmacyName" type="text" id="loginUsername" class="form-control" placeholder="Pharmacy name" />
+                  <span class="login-icon"><i class="fa-solid fa-user"></i></span>
+                </div>
+    
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="password" [(ngModel)]="userLogin.password" type="password" id="loginPassword" class="form-control" placeholder="Password" />
+                  <span class="login-icon"><i class="fa-solid fa-lock"></i></span>
+                </div>
+    
+                <div class="form-Outline">
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn" (click)="loginPharmacy()" type="button">Login</button>
+                </div>
+    
+                <p class="upperText">Forgot <a class="link-pass" href="#!">password?</a></p>
+                <p class="bottomText">Don't have an account? <a class="link-Info" (click)="isLogin = false">Register here</a></p>
+    
+              </form>
+            }
+            @else {
+              <form id="Register">
+  
+                <h3 class="title">Register</h3>
+    
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="email" [(ngModel)]="userRegistrationObject.email" type="email" id="registerEmail" class="form-control" placeholder="Email" />
+                  <span class="login-icon"><i class="fa-solid fa-envelope"></i></span>
+                </div>
+  
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="pharmacyName" [(ngModel)]="userRegistrationObject.pharmacyName" type="text" id="registerUsername" class="form-control" placeholder="Pharmacy name" />
+                  <span class="login-icon"><i class="fa-solid fa-user"></i></span>
+                </div>
+    
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="password" [(ngModel)]="userRegistrationObject.password" type="password" id="registerPassword" class="form-control" placeholder="Password" />
+                  <span class="login-icon"><i class="fa-solid fa-lock"></i></span>
+                </div> 
+    
+                <div class="form-Outline">
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn" (click)="registerPharmacy()" type="button">Register</button>
+                </div>
+  
+                <p class="bottomText">Do you have an account? <a class="link-Info" (click)="isLogin = true">Login here</a></p>
+    
+              </form>
+            }
+            
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>

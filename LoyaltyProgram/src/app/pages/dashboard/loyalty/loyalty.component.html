@@ -1,0 +1,46 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom"> 
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+      <div id="loyalty-form-container" class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input name="firstName" [(ngModel)]="customerObject.firstName" type="text" id="form3Example3" class="form-control form-control-lg" placeholder="First name" />
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input name="lastName" [(ngModel)]="customerObject.lastName" type="text" id="form3Example4" class="form-control form-control-lg" placeholder="Last name" />
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input name="phone" [(ngModel)]="customerObject.phone" type="text" id="form3Example5" class="form-control form-control-lg" placeholder="Phone number" />
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input name="dateOfBirth" [(ngModel)]="customerObject.dateOfBirth" type="date" id="form3Example6" class="form-control form-control-lg" placeholder="date-of-birth" />
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input name="gender" [(ngModel)]="customerObject.gender" type="text" id="form3Example7" class="form-control form-control-lg" placeholder="Gender" />
+          </div>
+
+        </form>
+      </div>
+
+      <div id="bi-container" class="col-md-9 col-lg-6 col-xl-5">
+        <div id="btn-img-container">
+          <div id="img-container">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+              class="img-fluid" alt="Sample image">
+          </div>
+          <div id="btn-container" class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" id="btn-submit" class="btn btn-primary btn-lg" (click)="createCustomer()">Enter</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

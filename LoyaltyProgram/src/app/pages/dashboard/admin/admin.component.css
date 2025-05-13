@@ -1,0 +1,111 @@
+
+#admin-container {
+    padding: 22px 50px 10px 50px;
+    margin: 0;
+    width: 60%;
+}
+#default-rules-container {
+    padding: 10px 0;
+}
+#custom-rules-container {
+    padding: 10px 0;
+}
+#rules-container {
+    padding: 20px 0;
+}
+#search-member-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.rule-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin-bottom: -1px;
+}
+.btn-admin {
+    padding: 3px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+}
+.btn-admin:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+.btn-logout {
+    margin-left: 20px;
+    padding: 6px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #000;
+    color: white;
+}
+#btn-delete {
+    margin-left: 20px;
+    padding: 6px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #0d6efd;
+    color: white;
+}
+#search-account-container {
+    margin-top: 50px;
+}
+#search-member-container {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  #admin-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .rule-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #search-member-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  #btn-delete {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  input.form-control {
+    width: 100%;
+  }
+
+  .btn-admin {
+    width: 100%;
+  }
+
+  .btn-logout {
+    width: 100%;
+    margin-left: 0;
+  }
+}

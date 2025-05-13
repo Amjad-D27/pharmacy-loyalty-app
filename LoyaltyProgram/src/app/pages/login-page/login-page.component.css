@@ -1,0 +1,152 @@
+
+.vh100 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 125px 450px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.fa-solid .fa-user {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.fa-solid .fa-lock {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.login-icon {
+    margin: 0px 10px;
+}
+
+#loginForm {
+    display: block;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 23rem;
+}
+
+#Register {
+    display: block;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 23rem;
+}
+
+.form-Outline {
+    margin: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 5px;
+    border: none;
+}
+
+.form-control {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.title {
+    display: block;
+    text-align: center;
+    padding: 30px 12px 12px 12px;
+    font-size: 1.75rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.25rem;
+    background-color: hsl(210, 100%, 50%);
+    
+}
+
+.btn:hover {
+    background-color: hsl(210, 100%, 40%);
+}
+
+.btn:active {
+    background-color: hsl(210, 100%, 55%);
+}
+
+.link-Info {
+    color: hsl(210, 100%, 50%);
+    text-decoration: underline;
+}
+
+.link-pass {
+    color: hsl(210, 100%, 50%);
+    text-decoration: none;
+}
+
+.upperText {
+    text-align: center;
+    text-decoration: none;
+    margin: 25px;
+}
+
+.bottomText {
+    text-align: center;
+    margin: 25px;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    margin: 60px 0;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  #loginForm,
+  #Register {
+    width: 100%;
+  }
+
+  .form-Outline {
+    margin: 12px 0;
+    width: 100%;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding: 20px 0 10px;
+  }
+
+  .upperText,
+  .bottomText {
+    margin: 15px;
+    font-size: 0.95rem;
+  }
+}

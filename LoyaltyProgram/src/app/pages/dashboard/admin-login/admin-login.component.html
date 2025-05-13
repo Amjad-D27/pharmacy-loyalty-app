@@ -1,0 +1,35 @@
+
+<section class="vh100">
+    <div class="container-Fluid">
+      <div class="Row">
+        <div class="Col-SM-6 Text-Black">
+  
+          <div class="loginContainer">
+
+              <form id="loginForm">
+  
+                <h3 class="title">Admin Log in</h3>
+    
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="username" [(ngModel)]="username" type="text" id="loginUsername" class="form-control" placeholder="Username" />
+                  <span class="login-icon"><i class="fa-solid fa-user"></i></span>
+                </div>
+    
+                <div data-mdb-input-init class="form-Outline">
+                  <input name="password" [(ngModel)]="password" type="password" id="loginPassword" class="form-control" placeholder="Password" />
+                  <span class="login-icon"><i class="fa-solid fa-lock"></i></span>
+                </div>
+    
+                <div class="form-Outline">
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn" (click)="onLogin()" type="button">Login</button>
+                </div>
+                <div *ngIf="loginFailed" class="error">Invalid credentials</div>
+    
+              </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>

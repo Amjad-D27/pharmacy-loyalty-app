@@ -1,0 +1,176 @@
+
+#dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px 40px;
+}
+.mobile-only {
+    display: none;
+}
+#title {
+    font-size: 2em;
+}
+.line1 {
+    height: 1px;
+    background-color: black;
+    margin: 10px 40px;
+}
+.line2 {
+    height: 1px;
+    width: 200px;
+    background-color: black;
+    margin: 0;
+}
+#dashboard-container {
+    display: inline-flex;
+}
+#dashboard-menu-container {
+    display: flex;
+    width: 20%;
+}
+#dashboard-loyalty-container {
+    display: flex;
+    width: 80%;
+}
+#dashboard-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 52vh;
+    margin: 10px 0 10px 20px;
+}
+.dashboard-btn {
+    margin: 1px;
+    padding: 22px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 1.4em;
+}
+.dashboard-btn:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+.dashboard-btn:active {
+    cursor: pointer;
+    background-color: #adadad;
+}
+#menu-seperator {
+    background-color: black;
+    margin: 10px 0;
+    width: 1px;
+    height: 80vh;
+
+}
+#logout-btn {
+    margin-left: 20px;
+    padding: 6px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #dashboard-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 10px 10px;
+    }
+
+    .toggleMenu-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .mobile-only {
+        display: block;
+        align-items: center;
+        font-size: 1.4em;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    #dashboard-menu-container {
+        display: none;
+    }
+
+    #dashboard-menu-container.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        position: static;
+        margin-right: 10px;
+    }
+
+    #dashboard-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #title {
+        font-size: 1.4em;
+        margin-top: 6px;
+    }
+
+    #dashboard-menu-container {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #dashboard-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:row;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .dashboard-btn {
+        width: 90%;
+        font-size: 1.2em;
+        padding: 16px;
+    }
+
+    #menu-seperator {
+        display: none;
+    }
+
+    #dashboard-loyalty-container {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .line1, .line2 {
+        width: 90%;
+        margin: 2px auto;
+    }
+
+    #logout-btn {
+        margin-bottom: 5px;
+        padding: 2px 7px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+        font-weight: bold;
+        background-color: #000;
+        color: white;
+    }
+}

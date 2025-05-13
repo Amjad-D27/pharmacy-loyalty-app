@@ -1,0 +1,45 @@
+<div id="admin-container">
+  <div class="header">
+    <div id="admin-title">
+      <h2 class="mb-4">Earning Rules</h2>
+      <p>These rules determine how customers rewards</p>
+    </div>
+    <div> 
+      <button class="btn-logout" (click)="logoutAdmin()">Logout</button>
+    </div>
+  </div>
+  <div id="rules-container">
+    <div id="default-rules-container">
+      <h4>Default Rule</h4>
+      <div class="rule-container">
+        <p>Earn 10 points for each dollar</p>
+        <button class="btn-admin" (click)="updatePointsRule(10)">select</button>
+      </div>
+    </div>
+    <div id="custom-rules-container">
+      <h4>Custom Rules</h4>
+      <div class="rule-container">
+        <p>Earn 15 points for each dollar</p>
+        <button class="btn-admin" (click)="updatePointsRule(15)">select</button>
+      </div>
+      <div class="rule-container">
+        <p>Double points on cosmetics products</p>
+        <button class="btn-admin" (click)="updatePointsRule(20)">select</button>
+      </div>
+    </div>
+    <div id="search-account-container">
+      <h4>Account to Delete</h4>
+      <div id="search-member-container" class="col-md-6">
+        <input
+          name="phoneNumber"
+          [(ngModel)]="phoneNumber"
+          type="text"
+          id="search"
+          class="form-control"
+          placeholder="Search account..."
+        />
+        <button id="btn-delete" type="button" (click)="deleteAccount()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

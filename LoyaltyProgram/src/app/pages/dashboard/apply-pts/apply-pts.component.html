@@ -1,0 +1,19 @@
+<div id="apply-pts-container">
+  <h2 class="mb-4">Apply Loyalty Points</h2>
+  <div id="apply-pts-form-container">
+    <form>
+      <div class="mb-3"> 
+        <label for="phoneNumber" class="form-label">Phone number</label>
+        <input name="phone" [(ngModel)]="payload.phone" type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number" required/>
+      </div>
+      <div class="mb-3">
+        <label for="totalAmount" class="form-label">Total amount</label>
+        <input name="amount" [(ngModel)]="payload.amount" type="number" class="form-control" id="totalAmount" placeholder="Enter bill total amount" required/>
+      </div>
+      <div id="info" class="mb-3">
+        <div>{{ pointsEarned }} pts will earned from this purchase</div>
+        <button type="submit" class="btn-apply-pts" (click)="applyPoints()">Apply Points</button>
+      </div>
+    </form>
+  </div>
+</div>

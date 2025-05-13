@@ -1,0 +1,48 @@
+
+<section id="dashboard-section">
+    <header id="dashboard-header">
+        <div class="toggleMenu-title">
+            <button id="menu-toggle" class="mobile-only" (click)="toggleMenu()">&#9776;</button>
+            <h1 id="title">Loyalty Program</h1>
+        </div>
+        <div>
+            <button id="logout-btn" (click)="onLogout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="line1"></div>
+
+    <div id="dashboard-container">
+        <div id="dashboard-menu-container" [ngClass]="{ 'active': menuVisible }">
+            <menu id="dashboard-menu">
+                <div class="line2"></div>
+                <button class="dashboard-btn" id="btn-loyalty" type="button" (click)="onLoyaltyClick()">Loyaty</button>
+                <div class="line2"></div>
+                <button class="dashboard-btn" id="btn-members" type="button" (click)="onMembersClick()">Members</button>
+                <div class="line2"></div>
+                <button class="dashboard-btn" id="btn-apply" type="button" (click)="onApplyClick()">Apply pts</button>
+                <div class="line2"></div>
+                <button class="dashboard-btn" id="btn-redeem" type="button" (click)="onRedeemClick()">Redeem pts</button>
+                <div class="line2"></div>
+                <button class="dashboard-btn" id="btn-admin" type="button" (click)="onAdminClick()">Admin</button>
+                <div class="line2"></div>
+            </menu>
+            <div id="menu-seperator"></div>
+        </div>
+        
+        <div id="dashboard-loyalty-container">
+            @if (Loyalty) {
+                <app-loyalty />
+            }@else if(Members) {
+                <app-members />
+            }@else if(applyPts) {
+                <app-apply-pts />
+            }@else if(redeemPts) {
+                <app-redeem-pts />
+            }
+        </div>
+    </div>
+
+</section>
+
+<router-outlet></router-outlet>

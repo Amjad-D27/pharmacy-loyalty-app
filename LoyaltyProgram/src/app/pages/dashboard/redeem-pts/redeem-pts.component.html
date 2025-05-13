@@ -1,0 +1,25 @@
+
+<div id="redeem-pts-container" >
+    <h2 class="mb-4">Redeem Loyalty Points</h2>
+    <div id="redeem-pts-form-container">
+        <form> 
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone number</label>
+                <input name="phone" [(ngModel)]="payload.phone" type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number" required>
+            </div>
+            <div class="mb-3">
+                <label for="totalAmount" class="form-label">Total amount</label>
+                <input name="amount" [(ngModel)]="payload.amount" type="number" class="form-control" id="totalAmount" placeholder="Enter bill total amount"required>
+            </div>
+            <div class="mb-3">
+                <label for="points" class="form-label">Points</label>
+                <input name="points" [(ngModel)]="payload.points" type="number" class="form-control" id="points" placeholder="Points to redeem" required>
+            </div>
+            <div id="info" class="mb-3">
+                <div>Your purchase amount after redeemption is {{ discountedAmount }}USD</div>
+                <button type="submit" class="btn-redeem-pts" (click)="redeemPoints()">Redeem Points</button>
+            </div>
+
+        </form>
+    </div>
+</div>

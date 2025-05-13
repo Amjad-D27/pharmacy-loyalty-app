@@ -1,0 +1,233 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header {
+    background-color: rgb(1, 223, 223);
+    margin: 0;
+    padding: 0;
+}
+#heading1 {
+    color: white;
+    padding-left: 30px;
+}
+#heading2 {
+    color: white;
+    padding-right: 60px;
+}
+#logo {
+    font-size: 60px;
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(0, 141, 141);
+    padding: 5px 0;
+}
+#nav #ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+#nav #ul .li {
+    float: left;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 5px 30px;
+}
+#nav #ul .li .li-a {
+    color: wheat;
+    text-decoration: none;
+}
+#nav #ul .li .li-a:hover {
+    text-decoration: underline;
+}
+
+#main-section {
+    margin: 30px;
+    padding: 30px;
+}
+#main-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 35%;
+    height: 64vh;
+    padding-bottom: 60px;
+    border-radius: 10px;
+}
+#container-1-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 10px;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+}
+#welcome-msg {
+    margin: 10px;
+    padding: 10px;
+    font-size: 2em;
+}
+#container-1-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 150px;
+    flex-wrap: wrap;
+}
+#benefits-heading {
+    font-size: 1em;
+}
+#container-1-2 #ul {
+    padding-right: 42px;
+}
+#container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    width: 60%;
+    height: 64vh;
+    background-image: url(https://w0.peakpx.com/wallpaper/915/450/HD-wallpaper-interior-pharmacy-cute-pharmacy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:local;
+    background-size: cover;
+}
+#container-2-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 270px;
+}
+#container-2-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 80px;
+}
+#h2-logo {
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 5px 5px 10px cyan, 5px 5px 10px rgb(0, 214, 214);
+    color: white;
+}
+#btn-login {
+    border: 2px solid white;
+    margin: 5px;
+    padding: 7px 30px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 135, 135);
+    
+}
+#btn-login:hover {
+    cursor: pointer;
+    background-color: rgb(1, 223, 223);
+}
+#btn-login:active {
+    cursor: pointer;
+    background-color: rgb(0, 168, 168);
+}
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #heading1 {
+        padding: 10px 0;
+        text-align: left;
+    }
+
+    #heading2 {
+        display: none;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav #ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #nav #ul .li {
+        display: flex;
+        justify-content: space-around;
+        float: none;
+        width: 100%;
+    }
+
+    #main-section {
+        margin: 0 10px 15px 10px ;
+        padding: 0 10px 15px 10px;
+    }
+
+    #main-section-container {
+        flex-direction: column;
+    }
+
+    #container-1 {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+    #container-2 {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-top: -50px;
+    }
+
+    #container-1-1 {
+        height: auto;
+        justify-content: center;
+    }
+
+    #container-1-2 {
+        height: auto;
+        justify-content: center;
+    }
+
+    #container-2-1 {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #container-2-2 {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #btn-login {
+        width: 40%;
+        padding: 6px 12px;
+        font-size: 1.2em;
+    }
+}

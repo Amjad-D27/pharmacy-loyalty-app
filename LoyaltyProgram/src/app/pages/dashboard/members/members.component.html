@@ -1,0 +1,64 @@
+<div id="members-container" class="container mt-4">
+  <div id="search-container">
+    <h2 class="mb-4">Members List</h2>
+
+    <div id="member-search" class="row mb-3">
+      <div id="search-member-container" class="col-md-6">
+        <input name="searchPhone" [(ngModel)]="searchPhone" type="text" id="search" class="form-control" placeholder="Search member..."/>
+        <button id="btn-submit" type="button" (click)="getCustomerByPhone()">Enter</button>
+      </div>
+      <div>
+        <button class="btn-submit" type="button" (click)="getAllCustomers()">Show All</button>
+      </div>
+    </div>
+  </div> 
+
+  <div>
+  @if(showTable) {
+    <table id="members-table" class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone</th>
+          <th>Points</th>
+          <th>Expiry Points</th>
+        </tr>
+      </thead> 
+      <tbody>
+        @for (customer of loyaltyAccount; track customer.customer_id) {
+        <tr>
+          <td>{{ customer.first_name }}</td>
+          <td>{{ customer.last_name }}</td>
+          <td>{{ customer.phone }}</td>
+          <td>{{ customer.total_points }}</td>
+          <td>{{ customer.expiry_date | date:'dd-MM-yyyy' }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  }
+  @if(showRow) {
+    <table id="member-table" class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone</th>
+          <th>Points</th>
+          <th>Expiry Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ loyaltyMember.first_name }}</td>
+          <td>{{ loyaltyMember.last_name }}</td>
+          <td>{{ loyaltyMember.phone }}</td>
+          <td>{{ loyaltyMember.total_points }}</td>
+          <td>{{ loyaltyMember.expiry_date | date:'yyyy-MM-dd' }}</td>
+        </tr>
+      </tbody>
+    </table>
+    }
+  </div>
+</div>
