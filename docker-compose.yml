@@ -1,0 +1,56 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./LoyaltyProgram
+      dockerfile: Dockerfile
+    container_name: pharmacy-angular
+    ports:
+      - "4200:8080"
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ./LoyaltyProgramBackend
+      dockerfile: Dockerfile
+    container_name: pharmacy-backend
+    ports:
+      - "3000:8080"
+    environment:
+      DB_HOST: mysql
+      DB_USER: pharmacy_user
+      DB_PASSWORD: userpassword
+      DB_NAME: loyalty_db
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: pharmacy-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: loyalty_db
+      MYSQL_USER: pharmacy_user
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pharmacy-phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: rootpassword
+      PMA_ARBITRARY: 1
+
+volumes:
+  mysql-data:

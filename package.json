@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "fontawesome": "^5.6.3"
+  },
+  "files.associations": {
+  "*.sql": "sql"
+}
+}
