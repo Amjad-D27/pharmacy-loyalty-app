@@ -20,7 +20,7 @@ export class ApplyPtsComponent {
   constructor(private http: HttpClient) {}
 
   applyPoints() {  
-    this.http.post('https://loyalty-backend-209074976382.europe-west1.run.app/api/Transaction', this.payload).subscribe({
+    this.http.post('http://localhost:8080/api/Transaction', this.payload).subscribe({
       next: (res: any) => {
         this.pointsEarned = res.pointsEarned;
       },

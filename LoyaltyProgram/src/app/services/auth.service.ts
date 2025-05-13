@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 export class AuthService {
 
-  private backend_Url = 'https://loyalty-backend-209074976382.europe-west1.run.app/api/auth';
+  private backend_Url = 'http://localhost:8080/api/auth';
 
   constructor(private http: HttpClient) {}
 

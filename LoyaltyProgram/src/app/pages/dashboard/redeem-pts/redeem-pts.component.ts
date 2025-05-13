@@ -21,7 +21,7 @@ export class RedeemPtsComponent {
   constructor(private http: HttpClient) {}
 
   redeemPoints() {
-    this.http.post('https://loyalty-backend-209074976382.europe-west1.run.app/api/Redemption', this.payload).subscribe({
+    this.http.post('http://localhost:8080/api/Redemption', this.payload).subscribe({
       next: (response: any) => {
         this.discountedAmount = response.discountedAmount;
       },

@@ -23,7 +23,7 @@ export class LoyaltyComponent {
 
   createCustomer() {
     this.http
-      .post('https://loyalty-backend-209074976382.europe-west1.run.app/api/Customer', this.customerObject)
+      .post('http://localhost:8080/api/Customer', this.customerObject)
       .subscribe({
         next: (response) => {
           console.log('Customer created successfully:', response);

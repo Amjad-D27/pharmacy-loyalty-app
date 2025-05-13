@@ -27,7 +27,7 @@ export class MembersComponent {
       return;
     }
 
-    this.http.get<any>(`https://loyalty-backend-209074976382.europe-west1.run.app/api/LoyaltyAccount/${this.searchPhone}`).subscribe({
+    this.http.get<any>(`http://localhost:8080/api/LoyaltyAccount/${this.searchPhone}`).subscribe({
       next: (data) => {
         this.loyaltyMember = data;
         this.showTable = false;
@@ -42,7 +42,7 @@ export class MembersComponent {
   }
 
   getAllCustomers() {
-    this.http.get<any[]>('https://loyalty-backend-209074976382.europe-west1.run.app/api/LoyaltyAccount/').subscribe({
+    this.http.get<any[]>('http://localhost:8080/api/LoyaltyAccount/').subscribe({
       next: (data) => {
         this.loyaltyAccount = data;
         this.showRow = false;

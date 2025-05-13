@@ -17,7 +17,7 @@ export class AdminComponent {
   constructor(private router: Router, private http: HttpClient) {}
 
   updatePointsRule(points: number) {
-    this.http.put('https://loyalty-backend-209074976382.europe-west1.run.app/api/PointsRule', {pointsPerDollar: points}).subscribe({
+    this.http.put('http://localhost:8080/api/PointsRule', {pointsPerDollar: points}).subscribe({
       next: () => alert(`Rule updated to ${points} points per dollar`),
       error: (err) => alert(err.error.message)
     });
@@ -25,7 +25,7 @@ export class AdminComponent {
   
   deleteAccount() {
     const phone = this.phoneNumber;
-    this.http.delete(`https://loyalty-backend-209074976382.europe-west1.run.app/api/LoyaltyAccount/${phone}`).subscribe({
+    this.http.delete(`http://localhost:8080/api/LoyaltyAccount/${phone}`).subscribe({
         next: (res) => {
           alert('Account deleted successfully');
           this.phoneNumber = '';
